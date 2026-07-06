@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the ScaleForge team — email, phone, or send us a message directly.",
+  description: "Get in touch with the Prabhakar Sollutions team — email, phone, or send us a message directly.",
   alternates: { canonical: "/contact" },
 };
 

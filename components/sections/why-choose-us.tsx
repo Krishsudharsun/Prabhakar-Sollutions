@@ -37,7 +37,7 @@ export function WhyChooseUs() {
     <section className="border-t border-navy-900/[0.06] bg-navy-900 py-24 text-white dark:border-white/[0.06]">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400">Why ScaleForge</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400">Why Prabhakar Sollutions</p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             We're hired to fix it, not just describe it
           </h2>

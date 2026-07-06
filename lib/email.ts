@@ -33,7 +33,7 @@ export async function sendLeadNotification({ subject, heading, fields }: SendLea
 
   try {
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL ?? "ScaleForge <hello@scaleforge.example>",
+      from: process.env.RESEND_FROM_EMAIL ?? "Prabhakar Sollutions <hello@prabhakarsollutions.example>",
       to,
       subject,
       html: `

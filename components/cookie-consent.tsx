@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
-const CONSENT_KEY = "scaleforge-cookie-consent";
+const CONSENT_KEY = "Prabhakar Sollutions-cookie-consent";
 
 type Consent = "accepted" | "declined" | null;
 

@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 export const metadata: Metadata = {
   title: "About Us — Our Mission, Values & Founder Story",
   description:
-    "ScaleForge exists to remove founders as the bottleneck in their own business. Learn our mission, values, and the story behind our founder.",
+    "Prabhakar Sollutions exists to remove founders as the bottleneck in their own business. Learn our mission, values, and the story behind our founder.",
   alternates: { canonical: "/about" },
 };
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
               We exist to get founders out of the daily bottleneck
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-ink-gray">
-              ScaleForge was built on a simple premise: most operational chaos isn't a
+              Prabhakar Sollutions was built on a simple premise: most operational chaos isn't a
               people problem, it's a systems problem — and it's fixable.
             </p>
           </ScrollReveal>
