@@ -13,7 +13,7 @@ export const siteConfig = {
     role: "Founder & Principal Consultant",
   },
   social: {
-    linkedin: "https://linkedin.com/company/your-company",
+    linkedin: "https://prabhakarvenkat.github.io/PRABHAKAR_V_PORTFOLIO/",
     youtube: "https://youtube.com/@your-channel",
     spotify: "https://open.spotify.com/show/your-show-id",
     twitter: "https://x.com/your-handle",
