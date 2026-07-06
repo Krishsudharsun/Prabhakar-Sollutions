@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "ScaleForge",
+  name: "Prabhakar Sollutions",
   tagline: "Business systems for founders who've outgrown chaos",
   description:
-    "ScaleForge helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems — so the business runs without them in every room.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.scaleforge.example",
+    "Prabhakar Sollutions helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems — so the business runs without them in every room.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.prabhakar-sollutions.example",
   ogImage: "/og-image.png",
   email: "hello@yourcompany.com",
   phone: "[Your Phone Number]",
