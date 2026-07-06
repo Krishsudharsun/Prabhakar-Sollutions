@@ -1,4 +1,4 @@
-# ScaleForge — Premium Business Website
+# Prabhakar Sollutions - Website
 
 A conversion-focused marketing site for a business operations / AI automation
 consultancy, built with Next.js 15, React 19, and TypeScript.
