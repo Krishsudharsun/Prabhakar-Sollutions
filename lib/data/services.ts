@@ -57,7 +57,7 @@ export const services: Service[] = [
       rows: [
         ["Internal ops hire", "Slow to ramp", "Deep over time", "Companies past $10M ARR"],
         ["Generic consultant", "Fast report", "Shallow, generic", "Board-ready documentation only"],
-        ["Prabhakar Sollutions audit", "4–8 weeks", "Deep + implemented", "Founders who want it fixed, not just found"],
+        ["Prabhakar Solutions audit", "4–8 weeks", "Deep + implemented", "Founders who want it fixed, not just found"],
       ],
     },
     stats: [
@@ -106,7 +106,7 @@ export const services: Service[] = [
       rows: [
         ["Off-the-shelf AI tool", "Days", "Low — fixed features", "Simple, single-purpose tasks"],
         ["In-house build", "Months", "High", "Teams with dedicated engineers"],
-        ["Prabhakar Sollutions build", "3–6 weeks", "High, tailored", "Founders who want it custom but don't want to hire for it"],
+        ["Prabhakar Solutions build", "3–6 weeks", "High, tailored", "Founders who want it custom but don't want to hire for it"],
       ],
     },
     stats: [
@@ -155,7 +155,7 @@ export const services: Service[] = [
       rows: [
         ["Ad hoc Notion/Docs", "Inconsistent", "Rarely updated", "Very early-stage teams"],
         ["Employee-written SOPs", "Variable quality", "Depends on discipline", "Teams with strong writers"],
-        ["Prabhakar Sollutions documentation", "Validated by testing", "Structured for upkeep", "Teams that need it to actually get used"],
+        ["Prabhakar Solutions documentation", "Validated by testing", "Structured for upkeep", "Teams that need it to actually get used"],
       ],
     },
     stats: [
@@ -204,7 +204,7 @@ export const services: Service[] = [
       rows: [
         ["Manual process", "Human-dependent", "None", "Very low volume"],
         ["DIY Zapier/Make", "Variable", "Moderate, ongoing", "Simple, single-step automations"],
-        ["Prabhakar Sollutions build", "Tested & monitored", "Done for you", "Multi-step, business-critical workflows"],
+        ["Prabhakar Solutions build", "Tested & monitored", "Done for you", "Multi-step, business-critical workflows"],
       ],
     },
     stats: [
@@ -253,7 +253,7 @@ export const services: Service[] = [
       rows: [
         ["Piecemeal fixes", "Single department", "Low", "Small, urgent problems"],
         ["Fractional COO", "Ongoing, broad", "Depends on person", "Companies ready for a permanent hire"],
-        ["Prabhakar Sollutions systemization", "Whole business, time-boxed", "Fully integrated", "Founders who want the whole system rebuilt once, well"],
+        ["Prabhakar Solutions systemization", "Whole business, time-boxed", "Fully integrated", "Founders who want the whole system rebuilt once, well"],
       ],
     },
     stats: [

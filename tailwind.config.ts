@@ -15,40 +15,47 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // ── "Slate & Cobalt" — approved palette ─────────────────────────
+        // Token names (navy/royal/emerald/signal) kept as-is so every
+        // existing component class (text-royal-600 etc.) keeps working —
+        // only the hex values changed.
         navy: {
-          DEFAULT: "#0B1220",
-          50: "#EEF1F6",
-          100: "#D7DEEA",
-          400: "#3A4C6B",
-          900: "#0B1220",
+          DEFAULT: "#0F172A",
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          400: "#475569",
+          900: "#0F172A",
         },
+        // was royal blue — now cobalt indigo
         royal: {
-          DEFAULT: "#2563EB",
-          50: "#EFF4FF",
-          100: "#DCE8FF",
-          400: "#5B8AF0",
-          600: "#2563EB",
-          700: "#1D4ED8",
+          DEFAULT: "#4F46E5",
+          50: "#EEF2FF",
+          100: "#E0E7FF",
+          400: "#818CF8",
+          600: "#4F46E5",
+          700: "#4338CA",
         },
+        // was emerald green — now cyan (secondary accent)
         emerald: {
-          DEFAULT: "#10B981",
-          50: "#ECFDF5",
-          400: "#34D399",
-          600: "#10B981",
+          DEFAULT: "#06B6D4",
+          50: "#ECFEFF",
+          400: "#22D3EE",
+          600: "#0891B2",
         },
+        // was orange — now amber (CTA)
         signal: {
-          DEFAULT: "#F97316",
-          50: "#FFF4ED",
-          400: "#FB923C",
-          600: "#F97316",
+          DEFAULT: "#F59E0B",
+          50: "#FFFBEB",
+          400: "#FBBF24",
+          600: "#D97706",
         },
         surface: {
           DEFAULT: "#F8FAFC",
-          dark: "#111827",
+          dark: "#0F172A",
         },
         ink: {
-          DEFAULT: "#111827",
-          gray: "#6B7280",
+          DEFAULT: "#0F172A",
+          gray: "#64748B",
         },
       },
       fontFamily: {
@@ -57,15 +64,20 @@ const config: Config = {
         mono: ["var(--font-mono)", "monospace"],
       },
       borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
-        "3xl": "2rem",
+        // Scaled down from the original (xl:1rem/2xl:1.5rem/3xl:2rem) —
+        // uniformly large rounding on every single card is one of the
+        // clearest "built with an AI tool" tells. This keeps the same
+        // hierarchy but much more restrained.
+        lg: "0.5rem",
+        xl: "0.625rem",
+        "2xl": "0.875rem",
+        "3xl": "1.25rem",
       },
       backgroundImage: {
         "grid-pattern":
           "linear-gradient(to right, rgba(148,163,184,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.08) 1px, transparent 1px)",
         "radial-fade":
-          "radial-gradient(circle at 50% 0%, rgba(37,99,235,0.12), transparent 60%)",
+          "radial-gradient(circle at 50% 0%, rgba(79,70,229,0.12), transparent 60%)",
       },
       keyframes: {
         "fade-up": {

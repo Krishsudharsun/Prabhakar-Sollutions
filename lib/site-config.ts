@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Prabhakar Sollutions",
+  name: "Prabhakar Solutions",
   tagline: "Business systems for founders who've outgrown chaos",
   description:
-    "Prabhakar Sollutions helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems — so the business runs without them in every room.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.prabhakar-sollutions.example",
+    "Prabhakar Solutions helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems — so the business runs without them in every room.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.prabhakarsolutions.example",
   ogImage: "/og-image.png",
   email: "hello@yourcompany.com",
   phone: "[Your Phone Number]",
@@ -13,7 +13,7 @@ export const siteConfig = {
     role: "Founder & Principal Consultant",
   },
   social: {
-    linkedin: "https://prabhakarvenkat.github.io/PRABHAKAR_V_PORTFOLIO/",
+    linkedin: "https://linkedin.com/company/your-company",
     youtube: "https://youtube.com/@your-channel",
     spotify: "https://open.spotify.com/show/your-show-id",
     twitter: "https://x.com/your-handle",

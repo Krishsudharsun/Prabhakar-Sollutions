@@ -92,7 +92,7 @@ function ChaosToSystemDiagram() {
             y1={node.y}
             x2={gridNodes[i].x + 100}
             y2={gridNodes[i].y}
-            stroke="#2563EB"
+            stroke="#4F46E5"
             strokeOpacity={0.25}
             strokeWidth={1.5}
             initial={{ pathLength: 0 }}
@@ -108,7 +108,7 @@ function ChaosToSystemDiagram() {
             cx={node.x}
             cy={node.y}
             r={5}
-            fill="#F97316"
+            fill="#F59E0B"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 0.85, scale: 1 }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
@@ -124,7 +124,7 @@ function ChaosToSystemDiagram() {
             width={18}
             height={18}
             rx={5}
-            fill="#10B981"
+            fill="#06B6D4"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.7 + i * 0.06 }}

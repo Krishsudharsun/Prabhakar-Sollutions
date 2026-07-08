@@ -1,4 +1,4 @@
-# Prabhakar Sollutions - Website
+# Prabhakar Solutions — Premium Business Website
 
 A conversion-focused marketing site for a business operations / AI automation
 consultancy, built with Next.js 15, React 19, and TypeScript.
@@ -94,9 +94,24 @@ any CMS account. To move to Sanity later:
 2. Install `next-sanity`, define a `post` schema matching the `BlogPost` type in `lib/data/blog-posts.ts`.
 3. Replace `getPostBySlug` / `blogPosts` imports in `app/blog/**` with Sanity client queries — the page components themselves don't need to change shape.
 
-### Hosting (Vercel) + Cloudflare
+### Hosting — Option A: Vercel + Cloudflare
 1. Push this repo to GitHub, import it into Vercel, add your environment variables in the Vercel dashboard.
 2. Point your domain's DNS to Cloudflare, enable the orange-cloud proxy for DDoS/WAF protection, and enable "Always Use HTTPS."
+
+### Hosting — Option B: Netlify
+Netlify has an official, actively-maintained Next.js runtime that supports the App Router, Server Components, and Server Actions used throughout this project — no code changes needed.
+
+1. Push this repo to GitHub (see `git init` steps earlier in this doc if you haven't already).
+2. Go to [app.netlify.com](https://app.netlify.com) → **Add new site** → **Import an existing project** → connect your GitHub account → select this repo.
+3. Netlify auto-detects it's a Next.js project and fills in the build command (`npm run build`) automatically — you don't need to touch these settings or add a `netlify.toml`.
+4. Before (or right after) the first deploy, go to **Site configuration → Environment variables** and add every variable from `.env.example` that you're using (see Section 3 above).
+5. Click **Deploy site**. First build takes 2–4 minutes; you'll get a live `yourname.netlify.app` URL.
+6. For your real domain: **Site configuration → Domain management → Add a domain**, then follow Netlify's DNS instructions. Netlify provides free SSL automatically. If you want Cloudflare's WAF/bot protection in front of Netlify too, point Cloudflare's DNS (proxied) at the Netlify site with a CNAME instead of using Netlify's own DNS.
+
+A couple of Netlify-specific notes:
+- Every form on this site is built with Next.js Server Actions (not Netlify's own form-detection feature), so nothing extra is needed for forms to work.
+- Free-tier serverless functions have a 10-second timeout. The form submissions here (validate → email → CRM sync) run well under that, so this shouldn't affect you.
+- This repo includes an `.nvmrc` file pinning Node 20, so Netlify (and Vercel, and your own machine via `nvm use`) all build with the same Node version automatically.
 
 ---
 
