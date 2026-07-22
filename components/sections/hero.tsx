@@ -45,7 +45,11 @@ export function Hero() {
             </motion.p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
+<<<<<<< HEAD
               <Button asChild size="lg" className="h-auto py-5">
+=======
+              <Button asChild size="lg">
+>>>>>>> d2470d16722b833c7488544dd52fd0dee85f90f9
                 <Link href="/apply">
                   Book Your Free Operations Audit <ArrowUpRight className="h-4 w-4" />
                 </Link>
