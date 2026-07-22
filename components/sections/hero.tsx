@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { logos } from "@/lib/data/testimonials";
 
 const chaosNodes = [
   { x: 20, y: 30 }, { x: 55, y: 15 }, { x: 85, y: 45 },
@@ -31,8 +30,7 @@ export function Hero() {
               transition={{ duration: 0.5 }}
               className="mt-5 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl dark:text-white"
             >
-              Turn business chaos into <span className="text-royal-600">systems</span> that
-              scale without you.
+              Build a Business That Runs Without You.
             </motion.h1>
 
             <motion.p
@@ -41,35 +39,22 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-ink-gray"
             >
-              We document your SOPs, automate the busywork with AI, and rebuild your
-              operations so the business runs on systems — not on you being in every
-              decision.
+              We help founders replace operational chaos with documented systems, AI
+              automation, and scalable workflows. So the business grows without depending
+              on founders every day.
             </motion.p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Button asChild size="lg">
                 <Link href="/apply">
-                  Book a free discovery call <ArrowUpRight className="h-4 w-4" />
+                  Book Your Free Operations Audit <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="ghost">
-                <Link href="/#case-studies">
+                <Link href="/#process">
                   <PlayCircle className="h-4 w-4" /> See how it works
                 </Link>
               </Button>
-            </div>
-
-            <div className="mt-14">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ink-gray/70">
-                Trusted by founder-led teams at
-              </p>
-              <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
-                {logos.map((logo) => (
-                  <span key={logo} className="whitespace-nowrap font-heading text-sm font-semibold text-ink-gray/50">
-                    {logo}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 

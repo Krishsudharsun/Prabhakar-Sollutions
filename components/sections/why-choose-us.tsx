@@ -1,4 +1,4 @@
-import { ShieldCheck, Gauge, Layers, Users } from "lucide-react";
+import { ShieldCheck, Gauge, Layers } from "lucide-react";
 import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/scroll-reveal";
 import { AnimatedCounter } from "@/components/animated-counter";
 
@@ -6,7 +6,7 @@ const reasons = [
   {
     icon: ShieldCheck,
     title: "Implementation, not just strategy",
-    description: "We stay until the SOPs are followed and the automations are live — not just documented in a deck.",
+    description: "We stay until the SOPs are followed and the automations are live, not just documented in a deck.",
   },
   {
     icon: Gauge,
@@ -18,18 +18,12 @@ const reasons = [
     title: "Systems that compound",
     description: "Operations, automation, and documentation are designed together, not bolted on separately.",
   },
-  {
-    icon: Users,
-    title: "Built for your team to run",
-    description: "Everything is documented and handed off so your team owns it — no dependency on us afterward.",
-  },
 ];
 
-const stats = [
-  { value: "[XX]+", label: "[stat — e.g. audits completed]" },
-  { value: "[XX]+", label: "[stat — e.g. businesses systemized]" },
-  { value: "[XX]%", label: "[stat — e.g. avg. time recovered]" },
-  { value: "[X.X]", label: "[stat — e.g. avg. client satisfaction /5]" },
+const resultStats = [
+  { value: "75%", label: "Up to 75% less time spent onboarding new employees" },
+  { value: "2X", label: "Doubling the value of the business" },
+  { value: "0", label: "Reducing the number of errors to zero" },
 ];
 
 export function WhyChooseUs() {
@@ -43,7 +37,7 @@ export function WhyChooseUs() {
           </h2>
         </ScrollReveal>
 
-        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-3">
           {reasons.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>
               <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6">
@@ -56,18 +50,32 @@ export function WhyChooseUs() {
             </StaggerItem>
           ))}
         </StaggerGroup>
-
-        <div className="mt-16 grid grid-cols-2 gap-8 border-t border-white/10 pt-12 sm:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="font-heading text-3xl font-bold text-white sm:text-4xl">
-                <AnimatedCounter value={stat.value} />
-              </p>
-              <p className="mt-2 text-xs leading-snug text-white/50">{stat.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
+
+      <ScrollReveal delay={0.1} className="mt-16">
+        <div className="bg-royal-600 py-14">
+          <div className="container">
+            <h3 className="text-center font-heading text-xl font-bold uppercase tracking-wide text-white sm:text-2xl">
+              Clients report results like...
+            </h3>
+            <div className="mt-10 grid gap-6 sm:grid-cols-3">
+              {resultStats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center gap-4 rounded-2xl bg-white/10 px-6 py-8 text-center"
+                >
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-navy-900">
+                    <span className="font-heading text-2xl font-bold text-white">
+                      <AnimatedCounter value={stat.value} />
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-white/90">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

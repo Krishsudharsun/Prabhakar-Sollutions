@@ -1,4 +1,4 @@
-// PLACEHOLDER CONTENT — replace with real, permissioned case studies before launch.
+// PLACEHOLDER CONTENT, replace with real, permissioned case studies before launch.
 export type CaseStudy = {
   slug: string;
   client: string;

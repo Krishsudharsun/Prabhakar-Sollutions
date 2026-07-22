@@ -71,7 +71,7 @@ export function Navbar() {
           )}
           <Button asChild size="sm">
             <Link href="/apply">
-              Book a discovery call <ArrowUpRight className="h-3.5 w-3.5" />
+              Book Your Free Operations Audit <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
           </Button>
         </div>
@@ -105,7 +105,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="mt-2">
-                <Link href="/apply">Book a discovery call</Link>
+                <Link href="/apply">Book Your Free Operations Audit</Link>
               </Button>
             </div>
           </motion.div>

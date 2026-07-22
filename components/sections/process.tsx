@@ -4,7 +4,7 @@ const steps = [
   {
     number: "01",
     title: "Discovery call",
-    description: "We learn your biggest bottleneck and tell you honestly whether we're the right fit — no pitch if we're not.",
+    description: "We learn your biggest bottleneck and tell you honestly whether we're the right fit, no pitch if we're not.",
   },
   {
     number: "02",
@@ -14,23 +14,23 @@ const steps = [
   {
     number: "03",
     title: "System design",
-    description: "You get a prioritized, fixed-scope plan ranked by impact — not a binder that sits on a shelf.",
+    description: "You get a prioritized, fixed-scope plan ranked by impact, not a binder that sits on a shelf.",
   },
   {
     number: "04",
-    title: "Build & implement",
-    description: "We build the SOPs, automations, and workflows alongside your team, not in isolation.",
+    title: "Implement",
+    description: "Testing with your team and implement it until we recognize that the team functions without the founder.",
   },
   {
     number: "05",
     title: "Handoff & training",
-    description: "Your team is trained to run and evolve the system — you own everything, with no lock-in.",
+    description: "Your team is trained to run and evolve the system, you own everything, with no lock-in.",
   },
 ];
 
 export function Process() {
   return (
-    <section className="py-24">
+    <section id="process" className="py-24">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">How it works</p>

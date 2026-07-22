@@ -1,8 +1,10 @@
 export const siteConfig = {
   name: "Prabhakar Solutions",
+  longName: "Prabhakar Growth Systems",
+  shortName: "P.G. Systems",
   tagline: "Business systems for founders who've outgrown chaos",
   description:
-    "Prabhakar Solutions helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems — so the business runs without them in every room.",
+    "Prabhakar Solutions helps founders and CEOs replace tribal knowledge and manual busywork with documented SOPs, automated workflows, and AI systems, so the business runs without them in every room.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.prabhakarsolutions.example",
   ogImage: "/og-image.png",
   email: "hello@yourcompany.com",
@@ -13,10 +15,12 @@ export const siteConfig = {
     role: "Founder & Principal Consultant",
   },
   social: {
-    linkedin: "https://linkedin.com/company/your-company",
-    youtube: "https://youtube.com/@your-channel",
-    spotify: "https://open.spotify.com/show/your-show-id",
-    twitter: "https://x.com/your-handle",
+    linkedin: "https://www.linkedin.com/company/prabhakargrowthsystems",
+    youtube: "https://www.youtube.com/@PrabhakarGrowth",
+    spotify: "https://open.spotify.com/episode/4UBjJsuj0PfWNV46iZBXoM",
+    twitter: "https://x.com/PrabhakarSamra1",
+    instagram: "https://www.instagram.com/prabhakar_venkat6",
+    substack: "https://www.substack.com/@prabhakarvenkat",
   },
   address: {
     locality: "[Your City]",
@@ -40,11 +44,10 @@ export const footerNav = {
     { label: "AI Automation", href: "/services/ai-automation" },
     { label: "SOP Documentation", href: "/services/sop-documentation" },
     { label: "Workflow Automation", href: "/services/workflow-automation" },
-    { label: "Business Systemization", href: "/services/business-systemization" },
+    { label: "Business Process Systemization", href: "/services/business-systemization" },
   ],
   company: [
     { label: "About", href: "/about" },
-    { label: "Case Studies", href: "/#case-studies" },
     { label: "Blog", href: "/blog" },
     { label: "Podcast", href: "/podcast" },
     { label: "Resources", href: "/resources" },

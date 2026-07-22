@@ -53,7 +53,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <p className="mt-5 text-lg leading-relaxed text-ink-gray">{service.heroSummary}</p>
           <div className="mt-8 flex justify-center">
             <Button asChild size="lg">
-              <Link href="/apply">Book a discovery call <ArrowRight className="h-4 w-4" /></Link>
+              <Link href="/apply">Book Your Free Operations Audit <ArrowRight className="h-4 w-4" /></Link>
             </Button>
           </div>
         </ScrollReveal>
@@ -205,7 +205,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </h2>
           <div className="mt-6 flex justify-center">
             <Button asChild size="lg">
-              <Link href="/apply">Book your free discovery call</Link>
+              <Link href="/apply">Book Your Free Operations Audit</Link>
             </Button>
           </div>
         </div>

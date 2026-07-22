@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
   title: "Apply for a Discovery Call",
-  description: "Tell us about your business and biggest operational bottleneck to see if we're a fit — then book your free discovery call.",
+  description: "Tell us about your business and biggest operational bottleneck to see if we're a fit, then book your free discovery call.",
   alternates: { canonical: "/apply" },
 };
 

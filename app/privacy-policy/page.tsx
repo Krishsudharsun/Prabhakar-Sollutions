@@ -19,8 +19,8 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="font-heading text-lg font-semibold text-ink dark:text-white">Information we collect</h2>
       <p>
-        We collect information you provide directly — such as your name, email, phone
-        number, and company details submitted through contact or application forms —
+        We collect information you provide directly, such as your name, email, phone
+        number, and company details submitted through contact or application forms,
         and information collected automatically through cookies and analytics tools,
         including pages visited, time on site, and general location.
       </p>

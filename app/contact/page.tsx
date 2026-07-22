@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the Prabhakar Solutions team — email, phone, or send us a message directly.",
+  description: "Get in touch with the Prabhakar Solutions team, email, phone, or send us a message directly.",
   alternates: { canonical: "/contact" },
 };
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
               Have a question first? Reach out directly.
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-ink-gray">
-              For discovery calls, use the application form — it's faster. For
+              For discovery calls, use the application form, it's faster. For
               everything else, we're one message away.
             </p>
 

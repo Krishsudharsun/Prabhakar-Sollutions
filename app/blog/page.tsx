@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/seo/json-ld";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Blog — Business Systems, Automation & AI",
+  title: "Blog: Business Systems, Automation & AI",
   description: "SEO-optimized articles on business systems, automation, AI, scaling operations, and leadership for founders.",
   alternates: { canonical: "/blog" },
 };

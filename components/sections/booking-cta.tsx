@@ -8,24 +8,24 @@ export function BookingCTA() {
     <section className="py-24">
       <div className="container">
         <ScrollReveal>
-          <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-8 py-16 text-center sm:px-16">
+          <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-8 py-20 text-center sm:px-16 sm:py-24">
             <div className="pointer-events-none absolute inset-0 bg-radial-fade opacity-60" />
             <div className="relative">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-emerald-400">
-                <CalendarCheck className="h-6 w-6" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-emerald-400">
+                <CalendarCheck className="h-7 w-7" />
               </div>
-              <h2 className="mx-auto mt-6 max-w-xl font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="mx-auto mt-7 max-w-2xl font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
                 See exactly where your operations are leaking time
               </h2>
-              <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/60 sm:text-base">
+              <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/60 sm:text-lg">
                 Book a free 30-minute discovery call. We'll diagnose your biggest
-                bottleneck and tell you honestly whether we can help — no pressure, no
+                bottleneck and tell you honestly whether we can help, no pressure, no
                 generic pitch.
               </p>
-              <div className="mt-9 flex justify-center">
-                <Button asChild size="lg">
+              <div className="mt-10 flex justify-center">
+                <Button asChild size="lg" className="h-16 px-10 text-base">
                   <Link href="/apply">
-                    Book your free call <ArrowUpRight className="h-4 w-4" />
+                    Book Your Free Operations Audit <ArrowUpRight className="h-5 w-5" />
                   </Link>
                 </Button>
               </div>

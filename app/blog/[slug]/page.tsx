@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </h2>
           <div className="mt-5 flex justify-center">
             <Button asChild>
-              <Link href="/apply">Book a discovery call <ArrowRight className="h-4 w-4" /></Link>
+              <Link href="/apply">Book Your Free Operations Audit <ArrowRight className="h-4 w-4" /></Link>
             </Button>
           </div>
         </div>

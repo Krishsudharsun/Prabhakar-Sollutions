@@ -9,9 +9,9 @@ import { siteConfig } from "@/lib/site-config";
 const icons = [Settings2, Bot, FileText, Workflow, Network];
 
 export const metadata: Metadata = {
-  title: "Services — Operations, AI Automation & Systemization",
+  title: "Services: Operations, AI Automation & Systemization",
   description:
-    "Five services designed to remove founder bottlenecks: Business Operations Optimization, AI Automation, SOP Documentation, Workflow Automation, and Business Systemization.",
+    "Five services designed to remove founder bottlenecks: Business Operations Optimization, AI Automation, SOP Documentation, Workflow Automation, and Business Process Systemization.",
   alternates: { canonical: "/services" },
 };
 
@@ -27,7 +27,7 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-ink-gray">
             Each service works standalone or combined into a full systemization
-            engagement — priced fixed, scoped clearly, built with your team.
+            engagement, priced fixed, scoped clearly, built with your team.
           </p>
         </ScrollReveal>
 

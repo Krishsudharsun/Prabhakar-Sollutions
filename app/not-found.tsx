@@ -10,7 +10,7 @@ export default function NotFound() {
         This page moved or never existed
       </h1>
       <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-gray">
-        Let's get you back to something useful — the homepage, our services, or
+        Let's get you back to something useful, the homepage, our services, or
         straight to booking a call.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -18,7 +18,7 @@ export default function NotFound() {
           <Link href="/"><ArrowLeft className="h-4 w-4" /> Back to home</Link>
         </Button>
         <Button asChild variant="outline">
-          <Link href="/apply">Book a discovery call</Link>
+          <Link href="/apply">Book Your Free Operations Audit</Link>
         </Button>
       </div>
     </section>

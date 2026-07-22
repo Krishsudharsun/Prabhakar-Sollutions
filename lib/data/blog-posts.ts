@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     slug: "signs-your-business-needs-systemization",
     title: "7 Signs Your Business Has Outgrown Its Systems",
     excerpt:
-      "If every decision still routes through you, growth isn't the problem — your systems are. Here's how to tell the difference.",
+      "If every decision still routes through you, growth isn't the problem, your systems are. Here's how to tell the difference.",
     category: "Business Systems",
     author: siteConfig.founder.name,
     publishedAt: "2026-05-12",
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "1. You're the only approval step that matters",
-        body: "If every exception, refund, or edge case needs your sign-off, the business has no decision system — it has a decision queue with you as the single server.",
+        body: "If every exception, refund, or edge case needs your sign-off, the business has no decision system, it has a decision queue with you as the single server.",
       },
       {
         heading: "2. New hires take too long to become productive",
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         heading: "Write the process people actually follow, not the ideal one",
-        body: "SOPs written from memory tend to document the intended process. SOPs written from direct observation document the real one — including the workarounds that matter.",
+        body: "SOPs written from memory tend to document the intended process. SOPs written from direct observation document the real one, including the workarounds that matter.",
       },
       {
         heading: "Validate by testing, not by review",

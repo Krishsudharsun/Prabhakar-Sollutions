@@ -2,9 +2,9 @@ import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 const problems = [
-  "Every decision — big or small — still routes through you",
+  "Every decision, big or small, still routes through you",
   "New hires take weeks to become productive because nothing is documented",
-  "Your team re-types the same data into three different tools",
+  "Your team retypes the same data into three different tools",
   "Growth means more chaos, not more leverage",
 ];
 
@@ -22,7 +22,7 @@ export function ProblemSolution() {
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-signal-600">The gap</p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink sm:text-4xl dark:text-white">
-            Growth exposes what informal operations were hiding
+            Why Growing Businesses Get Stuck?
           </h2>
         </ScrollReveal>
 

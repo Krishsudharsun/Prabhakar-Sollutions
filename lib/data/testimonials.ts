@@ -1,11 +1,11 @@
-// PLACEHOLDER CONTENT — replace with real client testimonials before launch.
+// PLACEHOLDER CONTENT, replace with real client testimonials before launch.
 export const testimonials = [
   {
     name: "[Client Name]",
     role: "[Job Title]",
     company: "[Company Name]",
     quote:
-      "[Add a testimonial quote here — ideally one that names a specific, believable result the client got from working with you.]",
+      "[Add a testimonial quote here, ideally one that names a specific, believable result the client got from working with you.]",
     result: "[Result, e.g. 2 days/week reclaimed]",
   },
   {
@@ -13,7 +13,7 @@ export const testimonials = [
     role: "[Job Title]",
     company: "[Company Name]",
     quote:
-      "[Add a second testimonial quote here. Real quotes convert far better than generic praise — ask past clients for a specific before/after.]",
+      "[Add a second testimonial quote here. Real quotes convert far better than generic praise, ask past clients for a specific before/after.]",
     result: "[Result metric]",
   },
   {
@@ -32,7 +32,7 @@ export const testimonials = [
   },
 ];
 
-// PLACEHOLDER — swap in real client/partner logos (as images) once available.
+// PLACEHOLDER, swap in real client/partner logos (as images) once available.
 export const logos = [
   "[Client Logo]",
   "[Client Logo]",

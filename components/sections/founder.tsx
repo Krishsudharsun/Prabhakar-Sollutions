@@ -1,7 +1,16 @@
-import { Linkedin, Mic, Mic2 } from "lucide-react";
+import { Linkedin, Instagram, Youtube, Mic, Rss, Twitter } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { siteConfig } from "@/lib/site-config";
 import { Badge } from "@/components/ui/badge";
+
+const founderSocials = [
+  { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
+  { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
+  { icon: Youtube, href: siteConfig.social.youtube, label: "YouTube" },
+  { icon: Mic, href: siteConfig.social.spotify, label: "Podcast" },
+  { icon: Rss, href: siteConfig.social.substack, label: "Substack" },
+  { icon: Twitter, href: siteConfig.social.twitter, label: "X" },
+];
 
 export function FounderSection() {
   return (
@@ -22,7 +31,7 @@ export function FounderSection() {
               [Add a one-line founder quote about why this company exists]
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-ink-gray sm:text-base">
-              [Add 3–4 sentences of founder story here — what you did before this,
+              [Add 3–4 sentences of founder story here, what you did before this,
               the specific problem you kept seeing, and why you started the
               company to fix it. Specifics (numbers, past roles, real moments)
               make this section far more credible than general statements.]
@@ -32,32 +41,19 @@ export function FounderSection() {
                 <p className="font-heading text-lg font-bold text-ink dark:text-white">{siteConfig.founder.name}</p>
                 <p className="text-sm text-ink-gray">{siteConfig.founder.role}</p>
               </div>
-              <div className="flex gap-3">
-                <a
-                  href={siteConfig.social.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
-                  aria-label="Founder's LinkedIn"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-                <a
-                  href={siteConfig.social.spotify}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
-                  aria-label="Founder's podcast"
-                >
-                  <Mic className="h-4 w-4" />
-                </a>
-                <a
-                  href="/about#speaking"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
-                  aria-label="Speaking engagements"
-                >
-                  <Mic2 className="h-4 w-4" />
-                </a>
+              <div className="flex flex-wrap gap-3">
+                {founderSocials.map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
+                    aria-label={`Founder's ${label}`}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
               </div>
             </div>
           </ScrollReveal>

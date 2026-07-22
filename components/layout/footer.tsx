@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Youtube, Twitter, Music2 } from "lucide-react";
+import { Linkedin, Youtube, Twitter, Music2, Instagram, Rss } from "lucide-react";
 import { siteConfig, footerNav } from "@/lib/site-config";
 
 export function Footer() {
@@ -20,8 +20,10 @@ export function Footer() {
             <div className="mt-6 flex gap-3">
               {[
                 { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
+                { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
                 { icon: Youtube, href: siteConfig.social.youtube, label: "YouTube" },
                 { icon: Music2, href: siteConfig.social.spotify, label: "Spotify" },
+                { icon: Rss, href: siteConfig.social.substack, label: "Substack" },
                 { icon: Twitter, href: siteConfig.social.twitter, label: "X" },
               ].map(({ icon: Icon, href, label }) => (
                 <a

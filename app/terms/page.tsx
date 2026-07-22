@@ -34,8 +34,8 @@ export default function TermsPage() {
 
       <h2 className="font-heading text-lg font-semibold text-ink dark:text-white">Intellectual property</h2>
       <p>
-        All content on this site — including text, graphics, and downloadable
-        resources — is owned by {siteConfig.name} unless otherwise noted, and may not
+        All content on this site, including text, graphics, and downloadable
+        resources, is owned by {siteConfig.name} unless otherwise noted, and may not
         be reproduced without permission.
       </p>
 

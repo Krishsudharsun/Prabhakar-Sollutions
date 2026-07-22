@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Podcast — Conversations on Operations & Scaling",
+  title: "Podcast: Conversations on Operations & Scaling",
   description: "Episodes with founders and operators on the operational lessons that don't make it into pitch decks.",
   alternates: { canonical: "/podcast" },
 };
