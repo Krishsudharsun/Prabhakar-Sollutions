@@ -1,0 +1,55 @@
+// Prisma schema — PostgreSQL via Supabase
+// This is optional persistence for leads/contacts. The app works fully
+// (email + CRM sync) without a database connected. Wire this up once
+// you have a Supabase project by setting DATABASE_URL in .env.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  BOOKED
+  DISQUALIFIED
+}
+
+model Lead {
+  id            String     @id @default(cuid())
+  name          String
+  email         String
+  phone         String?
+  company       String?
+  bottleneck    String
+  revenueRange  String?
+  status        LeadStatus @default(NEW)
+  source        String     @default("apply-form")
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([email])
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+
+  @@index([email])
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  source    String   @default("resources-page")
+  createdAt DateTime @default(now())
+}
