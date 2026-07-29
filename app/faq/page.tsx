@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
 import { Faq } from "@/components/sections/faq";
+import { BookingCTA } from "@/components/sections/booking-cta";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -11,9 +11,12 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
-      <div className="pt-24">
-        <Faq />
-      </div>
+      <Faq />
+      <BookingCTA
+        heading="Ready to Improve Your Business Operations?"
+        description="Book a free Operations Audit and discover opportunities to streamline your business."
+        buttonLabel="Book Free Audit"
+      />
     </>
   );
 }

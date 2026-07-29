@@ -60,7 +60,7 @@ export default function AboutPage() {
     <>
       <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "About", url: "/about" }]} />
 
-      <section className="pb-20 pt-36">
+      <section className="sticky top-0 z-[1] bg-white pb-20 pt-36 dark:bg-surface-dark">
         <div className="container">
           <ScrollReveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">About us</p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="border-t border-navy-900/[0.06] bg-surface py-20 dark:border-white/[0.08] dark:bg-surface-dark">
+      <section className="sticky top-0 z-[2] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <div className="grid gap-6 sm:grid-cols-2">
             <ScrollReveal>
@@ -109,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why We Exist */}
-      <section className="py-20">
+      <section className="sticky top-0 z-[3] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <ScrollReveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Why we exist</p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="border-t border-navy-900/[0.06] bg-surface py-20 dark:border-white/[0.08] dark:bg-surface-dark">
+      <section className="sticky top-0 z-[4] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <ScrollReveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">What makes us different</p>
@@ -149,7 +149,7 @@ export default function AboutPage() {
       </section>
 
       {/* Journey timeline, genuine chronological sequence */}
-      <section className="py-20">
+      <section className="sticky top-0 z-[5] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <ScrollReveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our journey</p>
@@ -175,7 +175,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Methodology */}
-      <section className="border-t border-navy-900/[0.06] bg-surface py-20 dark:border-white/[0.08] dark:bg-surface-dark">
+      <section className="sticky top-0 z-[6] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <ScrollReveal className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our methodology</p>
@@ -204,7 +204,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section id="speaking" className="py-20">
+      <section id="speaking" className="sticky top-0 z-[7] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
         <div className="container">
           <div className="grid items-start gap-14 lg:grid-cols-[0.8fr_1.2fr]">
             <ScrollReveal>
