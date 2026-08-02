@@ -212,11 +212,6 @@ function ChaosToSystemDiagram() {
         ))}
       </svg>
 
-      <div className="absolute -bottom-2 left-1/2 flex -translate-x-1/2 gap-8 text-center text-xs font-semibold uppercase tracking-wider text-white/50">
-        <span>Chaos</span>
-        <span>→</span>
-        <span>System</span>
-      </div>
     </div>
   );
 }
