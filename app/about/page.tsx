@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Target, Eye, Milestone, Award, Briefcase,
   Linkedin, Mic, Instagram, Youtube, Twitter, Rss,
@@ -60,204 +61,216 @@ export default function AboutPage() {
     <>
       <BreadcrumbSchema items={[{ name: "Home", url: "/" }, { name: "About", url: "/about" }]} />
 
-      <section className="sticky top-0 z-[1] bg-white pb-20 pt-36 dark:bg-surface-dark">
-        <div className="container">
-          <ScrollReveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">About us</p>
-            <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-ink sm:text-5xl dark:text-white">
-              We Build Businesses That Can Scale Without Their Founder.
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-ink-gray">
-              Most businesses don't stop growing because they lack ambition. They stop
-              growing because every important decision, approval, and process still
-              depends on the founder.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-ink-gray">
-              At {siteConfig.longName}, we help ambitious founders replace operational
-              chaos with scalable systems, documented processes, AI automation, and
-              workflows that allow their business to grow with confidence, not constant
-              firefighting.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Mission / Vision */}
-      <section className="sticky top-0 z-[2] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <ScrollReveal>
-              <div className="h-full rounded-2xl border border-navy-900/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.045]">
-                <Target className="h-6 w-6 text-royal-600" />
-                <h2 className="mt-4 font-heading text-lg font-semibold text-ink dark:text-white">Mission</h2>
-                <p className="mt-2 text-sm leading-relaxed text-ink-gray">
-                  Build Businesses That Run on Systems, Not Heroics.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.05}>
-              <div className="h-full rounded-2xl border border-navy-900/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.045]">
-                <Eye className="h-6 w-6 text-royal-600" />
-                <h2 className="mt-4 font-heading text-lg font-semibold text-ink dark:text-white">Vision</h2>
-                <p className="mt-2 text-sm leading-relaxed text-ink-gray">
-                  Every Growing Business Should Operate Like an Enterprise.
-                </p>
-              </div>
+      <div className="relative min-h-[130dvh]">
+        <section className="sticky top-0 z-[1] bg-white pb-20 pt-36 dark:bg-surface-dark">
+          <div className="container">
+            <ScrollReveal className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">About us</p>
+              <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-ink sm:text-5xl dark:text-white">
+                We Build Businesses That Can Scale Without Their Founder.
+              </h1>
+              <p className="mt-5 text-lg leading-relaxed text-ink-gray">
+                Most businesses don't stop growing because they lack ambition. They stop
+                growing because every important decision, approval, and process still
+                depends on the founder.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-ink-gray">
+                At {siteConfig.longName}, we help ambitious founders replace operational
+                chaos with scalable systems, documented processes, AI automation, and
+                workflows that allow their business to grow with confidence, not constant
+                firefighting.
+              </p>
             </ScrollReveal>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* Why We Exist */}
-      <section className="sticky top-0 z-[3] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <ScrollReveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Why we exist</p>
-            <p className="mt-5 text-lg leading-relaxed text-ink-gray">
-              Founders build businesses to create impact, not to manage daily operations.
-              We help replace founder dependent chaos with scalable systems, processes,
-              and automation so businesses can grow without relying on the founder for
-              every decision.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* What Makes Us Different */}
-      <section className="sticky top-0 z-[4] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <ScrollReveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">What makes us different</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
-              We Don't Just Recommend Systems. We Build Them.
-            </h2>
-            <p className="mt-3 text-base text-ink-gray">We stay until the systems are operating inside your business.</p>
-          </ScrollReveal>
-
-          <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {differentiators.map(({ icon: Icon, title, description }) => (
-              <StaggerItem key={title}>
+      <div className="relative min-h-[115dvh]">
+        <section className="sticky top-0 z-[2] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <div className="grid gap-6 sm:grid-cols-2">
+              <ScrollReveal>
                 <div className="h-full rounded-2xl border border-navy-900/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.045]">
-                  <Icon className="h-5 w-5 text-emerald-600" />
-                  <h3 className="mt-3 font-heading text-base font-semibold text-ink dark:text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-gray">{description}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
-
-      {/* Journey timeline, genuine chronological sequence */}
-      <section className="sticky top-0 z-[5] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <ScrollReveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our journey</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
-              From solo consulting to a full methodology
-            </h2>
-          </ScrollReveal>
-
-          <div className="mx-auto mt-14 max-w-2xl space-y-8">
-            {journey.map((item, i) => (
-              <ScrollReveal key={item.year} delay={i * 0.05}>
-                <div className="flex gap-5">
-                  <span className="w-16 shrink-0 font-heading text-lg font-bold text-royal-600">{item.year}</span>
-                  <div className="border-l border-navy-900/10 pl-5 dark:border-white/10">
-                    <h3 className="font-heading text-base font-semibold text-ink dark:text-white">{item.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-gray">{item.description}</p>
-                  </div>
+                  <Target className="h-6 w-6 text-royal-600" />
+                  <h2 className="mt-4 font-heading text-lg font-semibold text-ink dark:text-white">Mission</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-gray">
+                    Build Businesses That Run on Systems, Not Heroics.
+                  </p>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Methodology */}
-      <section className="sticky top-0 z-[6] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <ScrollReveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our methodology</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
-              The Business Process Systemization Framework&trade;
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink-gray">
-              Instead of overwhelming businesses with dozens of disconnected
-              improvements, we focus on building one complete operational system.
-            </p>
-          </ScrollReveal>
-
-          <div className="mx-auto mt-14 max-w-3xl space-y-4">
-            {methodologySteps.map((step, i) => (
-              <ScrollReveal key={step.title} delay={i * 0.05}>
-                <MethodologyCard
-                  index={i}
-                  icon={<step.icon className="h-7 w-7 text-white" />}
-                  title={step.title}
-                  description={step.description}
-                />
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Founder */}
-      <section id="speaking" className="sticky top-0 z-[7] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
-        <div className="container">
-          <div className="grid items-start gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-            <ScrollReveal>
-              <div className="mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-gradient-to-br from-navy-900 to-royal-700 lg:mx-0">
-                <div className="flex h-full w-full items-center justify-center font-heading text-6xl font-bold text-white/20">
-                  {siteConfig.founder.name.split(" ").map((n) => n[0]).join("")}
+              <ScrollReveal delay={0.05}>
+                <div className="h-full rounded-2xl border border-navy-900/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.045]">
+                  <Eye className="h-6 w-6 text-royal-600" />
+                  <h2 className="mt-4 font-heading text-lg font-semibold text-ink dark:text-white">Vision</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-gray">
+                    Every Growing Business Should Operate Like an Enterprise.
+                  </p>
                 </div>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-3">
-                {founderSocials.map(({ icon: Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
-                    aria-label={label}
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="relative min-h-[105dvh]">
+        <section className="sticky top-0 z-[3] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <ScrollReveal className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Why we exist</p>
+              <p className="mt-5 text-lg leading-relaxed text-ink-gray">
+                Founders build businesses to create impact, not to manage daily operations.
+                We help replace founder dependent chaos with scalable systems, processes,
+                and automation so businesses can grow without relying on the founder for
+                every decision.
+              </p>
             </ScrollReveal>
+          </div>
+        </section>
+      </div>
 
-            <ScrollReveal delay={0.1}>
-              <Badge>Meet the founder</Badge>
-              <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
-                {siteConfig.founder.name}
+      <div className="relative min-h-[175dvh]">
+        <section className="sticky top-0 z-[4] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <ScrollReveal className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">What makes us different</p>
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
+                We Don't Just Recommend Systems. We Build Them.
               </h2>
-              <p className="mt-1 text-sm font-medium text-royal-600">{siteConfig.founder.role}</p>
-              <p className="mt-5 text-sm leading-relaxed text-ink-gray sm:text-base">
-                [Add 2–3 sentences on the founder's background before this company,
-                relevant past roles, what they built or scaled, and the specific
-                experience that shaped how this company operates.]
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-ink-gray sm:text-base">
-                [Add a second paragraph, speaking, podcast, or community
-                involvement if relevant, or simply more on what they're focused
-                on today.]
-              </p>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                {achievements.map(({ icon: Icon, label }) => (
-                  <div key={label} className="rounded-xl border border-navy-900/[0.06] bg-white p-4 dark:border-white/[0.08] dark:bg-white/[0.045]">
-                    <Icon className="h-4 w-4 text-emerald-600" />
-                    <p className="mt-2 text-xs leading-snug text-ink-gray">{label}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="mt-3 text-base text-ink-gray">We stay until the systems are operating inside your business.</p>
             </ScrollReveal>
+
+            <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {differentiators.map(({ icon: Icon, title, description }) => (
+                <StaggerItem key={title}>
+                  <div className="h-full rounded-2xl border border-navy-900/[0.06] bg-white p-6 dark:border-white/[0.08] dark:bg-white/[0.045]">
+                    <Icon className="h-5 w-5 text-emerald-600" />
+                    <h3 className="mt-3 font-heading text-base font-semibold text-ink dark:text-white">{title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-gray">{description}</p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      <div className="relative min-h-[150dvh]">
+        <section className="sticky top-0 z-[5] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <ScrollReveal className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our journey</p>
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
+                From solo consulting to a full methodology
+              </h2>
+            </ScrollReveal>
+
+            <div className="mx-auto mt-14 max-w-2xl space-y-8">
+              {journey.map((item, i) => (
+                <ScrollReveal key={item.year} delay={i * 0.05}>
+                  <div className="flex gap-5">
+                    <span className="w-16 shrink-0 font-heading text-lg font-bold text-royal-600">{item.year}</span>
+                    <div className="border-l border-navy-900/10 pl-5 dark:border-white/10">
+                      <h3 className="font-heading text-base font-semibold text-ink dark:text-white">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-ink-gray">{item.description}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="relative min-h-[185dvh]">
+        <section className="sticky top-0 z-[6] rounded-t-[2rem] border-t border-navy-900/[0.06] bg-surface py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:border-white/[0.08] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <ScrollReveal className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Our methodology</p>
+              <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
+                The Business Process Systemization Framework&trade;
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-gray">
+                Instead of overwhelming businesses with dozens of disconnected
+                improvements, we focus on building one complete operational system.
+              </p>
+            </ScrollReveal>
+
+            <div className="mx-auto mt-14 max-w-3xl space-y-4">
+              {methodologySteps.map((step, i) => (
+                <ScrollReveal key={step.title} delay={i * 0.05}>
+                  <MethodologyCard
+                    index={i}
+                    icon={<step.icon className="h-7 w-7 text-white" />}
+                    title={step.title}
+                    description={step.description}
+                  />
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="relative min-h-[140dvh]">
+        <section id="speaking" className="sticky top-0 z-[7] rounded-t-[2rem] bg-white py-20 shadow-[0_-25px_50px_-20px_rgba(15,23,42,0.15)] dark:bg-surface-dark dark:shadow-[0_-25px_50px_-20px_rgba(0,0,0,0.6)]">
+          <div className="container">
+            <div className="grid items-start gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+              <ScrollReveal>
+                <div className="mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl lg:mx-0">
+                  <Image
+                    src="/founder.png"
+                    alt={siteConfig.founder.name}
+                    width={480}
+                    height={600}
+                    className="h-full w-full object-cover object-top"
+                  />
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {founderSocials.map(({ icon: Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-navy-900/10 text-ink-gray hover:border-royal-600 hover:text-royal-600 dark:border-white/10"
+                      aria-label={label}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  ))}
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.1}>
+                <Badge>Meet the founder</Badge>
+                <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-ink dark:text-white">
+                  {siteConfig.founder.name}
+                </h2>
+                <p className="mt-1 text-sm font-medium text-royal-600">{siteConfig.founder.role}</p>
+                <p className="mt-5 text-sm leading-relaxed text-ink-gray sm:text-base">
+                  [Add 2–3 sentences on the founder's background before this company,
+                  relevant past roles, what they built or scaled, and the specific
+                  experience that shaped how this company operates.]
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-ink-gray sm:text-base">
+                  [Add a second paragraph, speaking, podcast, or community
+                  involvement if relevant, or simply more on what they're focused
+                  on today.]
+                </p>
+
+                <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                  {achievements.map(({ icon: Icon, label }) => (
+                    <div key={label} className="rounded-xl border border-navy-900/[0.06] bg-white p-4 dark:border-white/[0.08] dark:bg-white/[0.045]">
+                      <Icon className="h-4 w-4 text-emerald-600" />
+                      <p className="mt-2 text-xs leading-snug text-ink-gray">{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

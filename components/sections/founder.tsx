@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Linkedin, Instagram, Youtube, Mic, Rss, Twitter } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { siteConfig } from "@/lib/site-config";
@@ -18,10 +19,14 @@ export function FounderSection() {
       <div className="container">
         <div className="grid items-center gap-14 rounded-3xl border border-navy-900/[0.06] bg-white p-8 sm:p-14 lg:grid-cols-[0.8fr_1.2fr] dark:border-white/[0.08] dark:bg-white/[0.045]">
           <ScrollReveal>
-            <div className="mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-gradient-to-br from-navy-900 to-royal-700">
-              <div className="flex h-full w-full items-center justify-center font-heading text-6xl font-bold text-white/20">
-                {siteConfig.founder.name.split(" ").map((n) => n[0]).join("")}
-              </div>
+            <div className="mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl">
+              <Image
+                src="/founder.png"
+                alt={siteConfig.founder.name}
+                width={480}
+                height={600}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
           </ScrollReveal>
 

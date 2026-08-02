@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { ArrowRight, Network, ClipboardList, Bot, Workflow, Gauge } from "lucide-react";
+import { ArrowRight, Network } from "lucide-react";
 import { getServiceBySlug } from "@/lib/data/services";
-import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/scroll-reveal";
+import { ScrollReveal } from "@/components/scroll-reveal";
+import { CapabilitiesCarousel } from "@/components/sections/capabilities-carousel";
 
-const capabilities = [
-  { slug: "business-operations-optimization", icon: Gauge },
-  { slug: "sop-documentation", icon: ClipboardList },
-  { slug: "ai-automation", icon: Bot },
-  { slug: "workflow-automation", icon: Workflow },
+const capabilitySlugs = [
+  "business-operations-optimization",
+  "sop-documentation",
+  "ai-automation",
+  "workflow-automation",
 ];
 
 export function ServicesOverview() {
@@ -53,34 +54,14 @@ export function ServicesOverview() {
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-ink-gray/70">
             Included capabilities
           </p>
-          <StaggerGroup className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {capabilities.map((cap) => {
-              const service = getServiceBySlug(cap.slug)!;
-              const Icon = cap.icon;
-              return (
-                <StaggerItem key={cap.slug}>
-                  <Link
-                    href={`/services/${cap.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-navy-900/[0.06] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-royal-600/30 hover:shadow-lg dark:border-white/[0.08] dark:bg-white/[0.045]"
-                  >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-royal-50 text-royal-600 dark:bg-royal-600/10">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="mt-4 font-heading text-base font-semibold text-ink dark:text-white">
-                      {service.name}
-                    </h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-gray">
-                      {service.heroSummary}
-                    </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-royal-600">
-                      Learn more
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </Link>
-                </StaggerItem>
-              );
-            })}
-          </StaggerGroup>
+          <div className="mt-5">
+            <CapabilitiesCarousel
+              capabilities={capabilitySlugs.map((slug) => {
+                const service = getServiceBySlug(slug)!;
+                return { slug, name: service.name, summary: service.heroSummary };
+              })}
+            />
+          </div>
         </ScrollReveal>
       </div>
     </section>

@@ -28,10 +28,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Only the homepage hero has a dark background sitting behind the
-  // transparent nav — everywhere else the page underneath is light.
-  const overDarkHero = pathname === "/" && !scrolled;
-
   return (
     <header
       className={cn(
@@ -44,17 +40,14 @@ export function Navbar() {
       <nav className="container flex h-18 items-center justify-between py-4">
         <Link
           href="/"
-          className={cn(
-            "flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight transition-colors",
-            overDarkHero ? "text-white" : "text-ink dark:text-white"
-          )}
+          className="flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight text-ink dark:text-white"
         >
           <Image
             src="/logo-mark.png"
             alt={`${siteConfig.name} logo`}
             width={32}
             height={32}
-            className={cn("h-8 w-8 object-contain transition-all", overDarkHero && "brightness-0 invert")}
+            className="h-8 w-8 object-contain"
             priority
           />
           {siteConfig.name}
@@ -66,11 +59,8 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors",
-                overDarkHero
-                  ? "text-white/70 hover:text-white"
-                  : "text-ink-gray hover:text-ink dark:text-white/60 dark:hover:text-white",
-                pathname === item.href && (overDarkHero ? "text-white" : "text-ink dark:text-white")
+                "text-sm font-medium text-ink-gray transition-colors hover:text-ink dark:text-white/60 dark:hover:text-white",
+                pathname === item.href && "text-ink dark:text-white"
               )}
             >
               {item.label}
@@ -83,12 +73,7 @@ export function Navbar() {
             <button
               aria-label="Toggle dark mode"
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className={cn(
-                "flex h-9 w-9 items-center justify-center rounded-full transition-colors",
-                overDarkHero
-                  ? "text-white/80 hover:bg-white/10"
-                  : "text-ink-gray hover:bg-navy-900/5 dark:text-white/70 dark:hover:bg-white/10"
-              )}
+              className="flex h-9 w-9 items-center justify-center rounded-full text-ink-gray transition-colors hover:bg-navy-900/5 dark:text-white/70 dark:hover:bg-white/10"
             >
               {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
@@ -101,10 +86,7 @@ export function Navbar() {
         </div>
 
         <button
-          className={cn(
-            "flex h-9 w-9 items-center justify-center lg:hidden transition-colors",
-            overDarkHero ? "text-white" : "text-ink dark:text-white"
-          )}
+          className="flex h-9 w-9 items-center justify-center text-ink transition-colors lg:hidden dark:text-white"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
