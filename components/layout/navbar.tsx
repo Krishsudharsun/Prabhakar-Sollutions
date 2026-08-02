@@ -1,0 +1,143 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Moon, Sun, ArrowUpRight } from "lucide-react";
+import { useTheme } from "next-themes";
+import { mainNav, siteConfig } from "@/lib/site-config";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => setMounted(true), []);
+  useEffect(() => setOpen(false), [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Only the homepage hero has a dark background sitting behind the
+  // transparent nav — everywhere else the page underneath is light.
+  const overDarkHero = pathname === "/" && !scrolled;
+
+  return (
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        scrolled
+          ? "border-b border-navy-900/[0.06] bg-white dark:border-white/[0.08] dark:bg-surface-dark"
+          : "border-b border-transparent bg-transparent"
+      )}
+    >
+      <nav className="container flex h-18 items-center justify-between py-4">
+        <Link
+          href="/"
+          className={cn(
+            "flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight transition-colors",
+            overDarkHero ? "text-white" : "text-ink dark:text-white"
+          )}
+        >
+          <Image
+            src="/logo-mark.png"
+            alt={`${siteConfig.name} logo`}
+            width={32}
+            height={32}
+            className={cn("h-8 w-8 object-contain transition-all", overDarkHero && "brightness-0 invert")}
+            priority
+          />
+          {siteConfig.name}
+        </Link>
+
+        <div className="hidden items-center gap-8 lg:flex">
+          {mainNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "text-sm font-medium transition-colors",
+                overDarkHero
+                  ? "text-white/70 hover:text-white"
+                  : "text-ink-gray hover:text-ink dark:text-white/60 dark:hover:text-white",
+                pathname === item.href && (overDarkHero ? "text-white" : "text-ink dark:text-white")
+              )}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="hidden items-center gap-3 lg:flex">
+          {mounted && (
+            <button
+              aria-label="Toggle dark mode"
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              className={cn(
+                "flex h-9 w-9 items-center justify-center rounded-full transition-colors",
+                overDarkHero
+                  ? "text-white/80 hover:bg-white/10"
+                  : "text-ink-gray hover:bg-navy-900/5 dark:text-white/70 dark:hover:bg-white/10"
+              )}
+            >
+              {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+          )}
+          <Button asChild size="sm">
+            <Link href="/apply">
+              Book Your Free Operations Audit <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
+          </Button>
+        </div>
+
+        <button
+          className={cn(
+            "flex h-9 w-9 items-center justify-center lg:hidden transition-colors",
+            overDarkHero ? "text-white" : "text-ink dark:text-white"
+          )}
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </nav>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden border-t border-navy-900/[0.06] bg-white lg:hidden dark:border-white/[0.08] dark:bg-surface-dark"
+          >
+            <div className="container flex flex-col gap-1 py-4">
+              {mainNav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:bg-navy-900/5 dark:text-white dark:hover:bg-white/5"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button asChild className="mt-2">
+                <Link href="/apply">Book Your Free Operations Audit</Link>
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
