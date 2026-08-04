@@ -17,10 +17,10 @@ export function BookingCTA({
   href = "/apply",
 }: BookingCTAProps) {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="container">
         <ScrollReveal>
-          <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-8 py-20 text-center sm:px-16 sm:py-24">
+          <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-8 py-20 text-center sm:px-16 sm:py-16">
             <div className="pointer-events-none absolute inset-0 bg-radial-fade opacity-60" />
             <div className="relative">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-emerald-400">

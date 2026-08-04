@@ -27,14 +27,16 @@ type Capability = {
 };
 
 /**
- * Pins the section and translates the card track horizontally as the user
- * scrolls vertically, so cards appear to move right-to-left. The extra
- * scroll distance created by the pin is set to exactly the track's
- * overflow width, so the animation starts with the first card flush at
- * the left edge and ends with the last card flush at the right edge —
- * no blank space before or after. On touch/small screens the pin is
- * disabled and the row becomes a natural, native horizontally-swipeable
- * list instead (scroll-jacking a few cards on mobile doesn't feel good).
+ * Slides the card track horizontally as the section scrolls through the
+ * viewport normally — no pinning, no scroll-jacking. The page keeps
+ * scrolling exactly as it would anywhere else; every section above and
+ * below stays static and fully visible in its normal document position.
+ * Only the card track's horizontal position is tied to how far the
+ * section itself has scrolled past: 0% when it first enters the bottom
+ * of the viewport, 100% by the time it exits the top, so the first card
+ * starts flush left and the last card ends flush right with no blank
+ * space at either end. On touch/small screens this is disabled and the
+ * row becomes a natural, native horizontally-swipeable list instead.
  */
 export function CapabilitiesCarousel({ capabilities }: { capabilities: Capability[] }) {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -49,22 +51,19 @@ export function CapabilitiesCarousel({ capabilities }: { capabilities: Capabilit
       if (!section || !track) return;
 
       const ctx = gsap.context(() => {
-        const trigger = ScrollTrigger.create({
-          trigger: section,
-          start: "top top",
-          end: () => `+=${Math.max(track.scrollWidth - section.offsetWidth, 0)}`,
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.6,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          animation: gsap.to(track, {
-            x: () => -Math.max(track.scrollWidth - section.offsetWidth, 0),
-            ease: "none",
-          }),
+        const tween = gsap.to(track, {
+          x: () => -Math.max(track.scrollWidth - section.offsetWidth, 0),
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.6,
+            invalidateOnRefresh: true,
+          },
         });
 
-        return () => trigger.kill();
+        return () => tween.scrollTrigger?.kill();
       }, section);
 
       return () => ctx.revert();

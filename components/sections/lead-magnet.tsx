@@ -13,7 +13,7 @@ export function LeadMagnet() {
   const [state, formAction, pending] = useActionState(submitNewsletterForm, initialState);
 
   return (
-    <section className="border-t border-navy-900/[0.06] bg-surface py-24 dark:border-white/[0.08] dark:bg-surface-dark">
+    <section className="border-t border-navy-900/[0.06] bg-surface py-16 dark:border-white/[0.08] dark:bg-surface-dark">
       <div className="container">
         <ScrollReveal>
           <div className="mx-auto grid max-w-4xl items-center gap-10 rounded-3xl border border-navy-900/[0.06] bg-white p-8 sm:p-12 lg:grid-cols-[1fr_1fr] dark:border-white/[0.08] dark:bg-white/[0.045]">

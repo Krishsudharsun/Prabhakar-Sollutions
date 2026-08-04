@@ -30,7 +30,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="py-24">
+    <section id="process" className="py-16">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">How it works</p>

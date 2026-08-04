@@ -15,7 +15,7 @@ const founderSocials = [
 
 export function FounderSection() {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="container">
         <div className="grid items-center gap-14 rounded-3xl border border-navy-900/[0.06] bg-white p-8 sm:p-14 lg:grid-cols-[0.8fr_1.2fr] dark:border-white/[0.08] dark:bg-white/[0.045]">
           <ScrollReveal>

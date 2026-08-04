@@ -200,7 +200,6 @@ function ChaosToSystemDiagram() {
           />
         ))}
       </svg>
-
     </div>
   );
 }

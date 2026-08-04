@@ -15,7 +15,7 @@ export function ServicesOverview() {
   const coreService = getServiceBySlug("business-systemization")!;
 
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">What we do</p>

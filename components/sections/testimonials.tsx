@@ -4,7 +4,7 @@ import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/scroll-rev
 
 export function Testimonials() {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-royal-600">Testimonials</p>

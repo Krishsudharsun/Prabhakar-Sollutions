@@ -14,7 +14,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section className="border-t border-navy-900/[0.06] bg-surface py-24 dark:border-white/[0.08] dark:bg-surface-dark">
+    <section className="border-t border-navy-900/[0.06] bg-surface py-16 dark:border-white/[0.08] dark:bg-surface-dark">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600">Industries</p>

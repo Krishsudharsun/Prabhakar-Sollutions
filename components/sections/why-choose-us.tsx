@@ -28,7 +28,7 @@ const resultStats = [
 
 export function WhyChooseUs() {
   return (
-    <section className="border-t border-navy-900/[0.06] bg-navy-900 py-24 text-white dark:border-white/[0.08]">
+    <section className="border-t border-navy-900/[0.06] bg-navy-900 py-16 text-white dark:border-white/[0.08]">
       <div className="container">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400">Why Prabhakar Solutions</p>
